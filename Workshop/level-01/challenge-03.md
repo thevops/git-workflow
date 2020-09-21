@@ -29,7 +29,7 @@
 ## Working
 
 1. `git add -p`
-2. `git commit`
+2. `git commit` (`-m`)
 3. `git push -u origin NAME`
 
 <details><summary>Commit message</summary>
