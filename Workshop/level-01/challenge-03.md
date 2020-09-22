@@ -35,11 +35,11 @@
 <details><summary>Commit message</summary>
 <p>
 
-1 line: summary
-2 line: empty
-3 line: details
-max 72 chars in every line
-message in Past Simple: Added, changed, removed
+- 1 line: summary
+- 2 line: empty
+- 3 line: details
+- max 72 chars in every line
+- message in Past Simple: Added, changed, removed
 
 </p>
 </details>
