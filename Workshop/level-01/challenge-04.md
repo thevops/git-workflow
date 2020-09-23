@@ -6,6 +6,7 @@
 1. Create merge request (or no if you want merge manually)
 2. Review code
 3. `git merge NAME --no-ff -e -m ""`
+    - Fast Forward
     - conflicts
 
 ## *Clean

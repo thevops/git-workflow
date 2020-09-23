@@ -10,10 +10,22 @@
 
 
 ## Checkout
-
+Updates files in the working tree to match the version in passed commit, index, tree.
 
 1. `git checkout master`
 2. `git checkout -b NAME`
+
+<details><summary>Why?</summary>
+<p>
+
+- parallel working (versions, workers)
+- experiments
+- history log
+- independent working
+
+</p>
+</details>
+
 
 <details><summary>Branch naming</summary>
 <p>
@@ -21,6 +33,15 @@
 - feat-some-keywords
 - bug-some-keywords
 - task-some-keywords
+
+</p>
+</details>
+
+<details><summary>Some tips</summary>
+<p>
+
+- **head** - pointer to last commit (tip) on every branch (.git/refs/heads)
+- **HEAD** - current commit (alias @)
 
 </p>
 </details>

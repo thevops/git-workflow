@@ -1,0 +1,18 @@
+git show @@'{3000 minutes ago}'
+
+
+Detached HEAD
+git checkout @^
+- nie jesteśmy na żadnej gałęzi
+- wrocic git checkout -
+
+
+pobranie pojedynczego pliku z innego commita
+git checkout COMMIT -- sciezka/do/pliku
+
+
+cherry-pick
+- move one commit to other branch
+- git checkout master
+- git cherry-pick COMMIT_HASH
+
