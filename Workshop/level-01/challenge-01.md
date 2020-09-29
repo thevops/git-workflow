@@ -1,5 +1,11 @@
 # Challenge 01 - Intro
 
+## What is GIT?
+
+![git architecture](data/Distributed-Version-Control-System-Workflow-What-Is-Git-Edureka.png)
+source: https://www.edureka.co/blog/what-is-git/
+
+
 ## Why GIT?
 
 - sharing
@@ -10,8 +16,13 @@
 - "backup"
 - changelog
 
-## What is GIT?
+## Basic definitions
 
-![git architecutre](data/Distributed-Version-Control-System-Workflow-What-Is-Git-Edureka.png)
-source: https://www.edureka.co/blog/what-is-git/
-
+- repository
+- clone
+- pull
+- commit
+- push
+- branch (master, staging, ...)
+- checkout
+- working copy

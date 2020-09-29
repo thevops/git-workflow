@@ -41,7 +41,7 @@ Updates files in the working tree to match the version in passed commit, index, 
 <p>
 
 - **head** - pointer to last commit (tip) on every branch (.git/refs/heads)
-- **HEAD** - current commit (alias @)
+- **HEAD** - current commit (alias @) (.git/HEAD)
 
 </p>
 </details>

@@ -1,5 +1,12 @@
 # Agenda
 
+## Requirements
+
+- git
+- gitk (https://git-scm.com/docs/gitk)
+- meld (https://meldmerge.org/)
+- Visual Studio Code
+
 ## Level 1
 
 1. [Intro](level-01/challenge-01.md)
