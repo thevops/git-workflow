@@ -6,6 +6,7 @@
 - gitk (https://git-scm.com/docs/gitk)
 - meld (https://meldmerge.org/)
 - Visual Studio Code
+- https://github.com/magicmonty/bash-git-prompt
 
 ## Level 1
 
