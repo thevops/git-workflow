@@ -33,5 +33,4 @@ Save changes that you created before pulling new version
 
 Somebody pushed new code into repo. You didn't pulled it, but you made some changes. Then you want to commit and push it:
 ```bash
-
 ```
