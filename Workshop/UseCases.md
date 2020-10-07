@@ -31,6 +31,54 @@ nothing to commit, working tree clean
 Save changes that you created before pulling new version
 --------------------------------------------------------
 
+### Problem
 Somebody pushed new code into repo. You didn't pulled it, but you made some changes. Then you want to commit and push it:
 ```bash
+✔ 13:57 /tmp/git-workflow [master|✔] $ vim README.md # add your code
+✔ 13:57 /tmp/git-workflow [master|✚ 1] $ git add .
+✔ 13:57 /tmp/git-workflow [master|●1] $ git commit -m "new changes"
+[master 54944dd] new changes
+ 1 file changed, 1 insertion(+)
+✔ 13:58 /tmp/git-workflow [master ↑·1|✔] $ git push
+To github.com:vizarch/git-workflow.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@REPO_URL/git-workflow.git'
+podpowiedź: Updates were rejected because the remote contains work that you do
+podpowiedź: not have locally. This is usually caused by another repository pushing
+podpowiedź: to the same ref. You may want to first integrate the remote changes
+podpowiedź: (e.g., 'git pull ...') before pushing again.
+podpowiedź: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+```
+
+### Solution
+
+- move you code into different (new) branch
+- back to master, reset and pull new code
+- rebase your branch
+
+```bash
+✔ 14:00 /tmp/git-workflow [master ↑·1|✔] $ git checkout -b new-code
+Switched to a new branch 'new-code'
+✔ 14:00 /tmp/git-workflow [new-code L|✔] $ git checkout -
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+✔ 14:01 /tmp/git-workflow [master ↑·1|✔] $ git log # look at
+✔ 14:01 /tmp/git-workflow [master ↑·1|✔] $ git reset --hard origin/master
+HEAD is now at 3e87567 new
+✔ 14:01 /tmp/git-workflow [master|✔] $ git checkout new-code 
+Switched to branch 'new-code'
+✔ 14:03 /tmp/git-workflow [new-code L|✔] $ git rebase -i master # !!! integrate master changes in your code
+Successfully rebased and updated refs/heads/new-code.
+✔ 14:06 /tmp/git-workflow [new-code L|✔] $ git checkout master # back to master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+✔ 14:06 /tmp/git-workflow [master|✔] $ git merge new-code # merge your code
+Updating 4242f78..cfcaccc
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+# now you can push
 ```
